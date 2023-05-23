@@ -1,0 +1,35 @@
+
+conda config --add channels conda-forge
+conda create --name mpp python=3.9 
+conda run -n mpp conda install jupyterlab matplotlib pandas scikit-learn spyder tensorflow
+conda run -n mpp jupyter lab
+
+conda env list
+conda activate mpp
+jupyter lab
+conda deactivate
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+t = np.arange(0, 10, 0.1);
+X= np.sin(t)
+
+plt.plot(t, X)
+
+
+
+!python -V
+!pip list
+!nvidia-smi
+
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38\python.exe -V
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\pip3 list
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\pip3 install virtualenv
+
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38\python.exe -m venv mpp-pip
+C:\Users\Administrator\mpp-pip\Scripts\activate.bat
+pip install jupyterlab matplotlib pandas scikit-learn spyder
+
+C:\Users\Administrator\mpp-pip\Scripts\deactivate.bat
